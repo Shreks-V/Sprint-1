@@ -20,13 +20,10 @@ import { AuthService } from '../../services/auth.service';
                 <path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/>
               </svg>
             </div>
-            <div class="hidden sm:flex flex-col">
-              <span class="font-bold text-white text-lg leading-tight">Espina Bifida</span>
-              <span class="text-[#f3ad1c] text-[10px] font-semibold tracking-wider uppercase">Sprint 1</span>
-            </div>
+            <span class="font-bold text-white text-lg hidden sm:block">Espina Bífida</span>
           </a>
 
-          <!-- Center: Navigation (desktop) - Solo modulos Sprint 1 -->
+          <!-- Center: Navigation (desktop) -->
           <div class="hidden lg:flex items-center gap-1">
             <a routerLink="/dashboard"
                [class]="isActive('/dashboard') ? 'bg-[#f3ad1c] text-white shadow-lg scale-105' : 'text-white/90 hover:text-white hover:bg-white/10'"
@@ -37,6 +34,24 @@ import { AuthService } from '../../services/auth.service';
               Dashboard
             </a>
 
+            <a routerLink="/registro-usuarios"
+               [class]="isActive('/registro-usuarios') ? 'bg-[#f3ad1c] text-white shadow-lg scale-105' : 'text-white/90 hover:text-white hover:bg-white/10'"
+               class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 no-underline whitespace-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              Beneficiarios
+            </a>
+
+            <a routerLink="/citas"
+               [class]="isActive('/citas') ? 'bg-[#f3ad1c] text-white shadow-lg scale-105' : 'text-white/90 hover:text-white hover:bg-white/10'"
+               class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 no-underline whitespace-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
+              </svg>
+              Citas
+            </a>
+
             <a routerLink="/almacen"
                [class]="isActive('/almacen') ? 'bg-[#f3ad1c] text-white shadow-lg scale-105' : 'text-white/90 hover:text-white hover:bg-white/10'"
                class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 no-underline whitespace-nowrap">
@@ -44,6 +59,24 @@ import { AuthService } from '../../services/auth.service';
                 <path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>
               </svg>
               Almacen
+            </a>
+
+            <a routerLink="/recibos"
+               [class]="isActive('/recibos') ? 'bg-[#f3ad1c] text-white shadow-lg scale-105' : 'text-white/90 hover:text-white hover:bg-white/10'"
+               class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 no-underline whitespace-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>
+              </svg>
+              Recibos
+            </a>
+
+            <a routerLink="/reportes"
+               [class]="isActive('/reportes') ? 'bg-[#f3ad1c] text-white shadow-lg scale-105' : 'text-white/90 hover:text-white hover:bg-white/10'"
+               class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 no-underline whitespace-nowrap">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>
+              </svg>
+              Reportes
             </a>
           </div>
 
@@ -60,9 +93,11 @@ import { AuthService } from '../../services/auth.service';
             <!-- Mobile menu button -->
             <button (click)="mobileMenuOpen = !mobileMenuOpen"
                     class="lg:hidden flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-white border border-white/20 cursor-pointer">
+              <!-- Menu icon -->
               <svg *ngIf="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/>
               </svg>
+              <!-- X icon -->
               <svg *ngIf="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
               </svg>
@@ -82,6 +117,24 @@ import { AuthService } from '../../services/auth.service';
             Dashboard
           </a>
 
+          <a routerLink="/registro-usuarios" (click)="mobileMenuOpen = false"
+             [class]="isActive('/registro-usuarios') ? 'bg-[#f3ad1c] text-white shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'"
+             class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+            Beneficiarios
+          </a>
+
+          <a routerLink="/citas" (click)="mobileMenuOpen = false"
+             [class]="isActive('/citas') ? 'bg-[#f3ad1c] text-white shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'"
+             class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/>
+            </svg>
+            Citas
+          </a>
+
           <a routerLink="/almacen" (click)="mobileMenuOpen = false"
              [class]="isActive('/almacen') ? 'bg-[#f3ad1c] text-white shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'"
              class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm no-underline">
@@ -89,6 +142,24 @@ import { AuthService } from '../../services/auth.service';
               <path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/>
             </svg>
             Almacen
+          </a>
+
+          <a routerLink="/recibos" (click)="mobileMenuOpen = false"
+             [class]="isActive('/recibos') ? 'bg-[#f3ad1c] text-white shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'"
+             class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/>
+            </svg>
+            Recibos
+          </a>
+
+          <a routerLink="/reportes" (click)="mobileMenuOpen = false"
+             [class]="isActive('/reportes') ? 'bg-[#f3ad1c] text-white shadow-lg' : 'text-white/90 hover:text-white hover:bg-white/10'"
+             class="flex items-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm no-underline">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/>
+            </svg>
+            Reportes
           </a>
 
           <hr class="border-white/20 my-2">

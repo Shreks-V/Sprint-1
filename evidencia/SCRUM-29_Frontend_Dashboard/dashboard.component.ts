@@ -104,8 +104,29 @@ import { ApiService } from '../../services/api.service';
                 Acciones Rápidas
               </h3>
               <div class="space-y-3">
-                <!-- Pre-registro -->
-                <button (click)="navigateTo('/preregistro')"
+                <!-- Nuevo Recibo -->
+                <button (click)="navigateTo('/recibos')"
+                  class="w-full flex items-center gap-4 p-4 rounded-2xl shadow-lg bg-gradient-to-br from-emerald-500 to-emerald-600 text-white hover:shadow-xl transition-all cursor-pointer border-0">
+                  <div class="p-3 bg-white/20 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/>
+                      <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+                      <path d="M12 17.5v-11"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 text-left">
+                    <p class="font-bold">Nuevo Recibo</p>
+                    <p class="text-xs text-white/70">Generar comprobante</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
+                </button>
+
+                <!-- Nuevo Paciente -->
+                <button (click)="navigateTo('/registro-usuarios')"
                   class="w-full flex items-center gap-4 p-4 rounded-2xl shadow-lg bg-gradient-to-br from-[#007BFF] to-[#0056b3] text-white hover:shadow-xl transition-all cursor-pointer border-0">
                   <div class="p-3 bg-white/20 rounded-xl">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -117,8 +138,30 @@ import { ApiService } from '../../services/api.service';
                     </svg>
                   </div>
                   <div class="flex-1 text-left">
-                    <p class="font-bold">Pre-Registro</p>
-                    <p class="text-xs text-white/70">Formulario de solicitud</p>
+                    <p class="font-bold">Nuevo Paciente</p>
+                    <p class="text-xs text-white/70">Registrar beneficiario</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
+                </button>
+
+                <!-- Agendar Cita -->
+                <button (click)="navigateTo('/citas')"
+                  class="w-full flex items-center gap-4 p-4 rounded-2xl shadow-lg bg-gradient-to-br from-[#f3ad1c] to-[#ffb84d] text-white hover:shadow-xl transition-all cursor-pointer border-0">
+                  <div class="p-3 bg-white/20 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="18" height="18" x="3" y="4" rx="2" ry="2"/>
+                      <line x1="16" x2="16" y1="2" y2="6"/>
+                      <line x1="8" x2="8" y1="2" y2="6"/>
+                      <line x1="3" x2="21" y1="10" y2="10"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 text-left">
+                    <p class="font-bold">Agendar Cita</p>
+                    <p class="text-xs text-white/70">Programar consulta</p>
                   </div>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -169,7 +212,25 @@ import { ApiService } from '../../services/api.service';
                   </svg>
                 </button>
 
-                <!-- (Reportes, Beneficiarios, Citas y Recibos disponibles en sprints posteriores) -->
+                <!-- Reportes -->
+                <button (click)="navigateTo('/reportes')"
+                  class="w-full flex items-center gap-4 p-4 rounded-2xl shadow-lg bg-white border-2 border-slate-200 text-slate-700 hover:shadow-xl transition-all cursor-pointer">
+                  <div class="p-3 bg-slate-100 rounded-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M3 3v18h18"/>
+                      <path d="m19 9-5 5-4-4-3 3"/>
+                    </svg>
+                  </div>
+                  <div class="flex-1 text-left">
+                    <p class="font-bold">Reportes</p>
+                    <p class="text-xs text-slate-400">Estadísticas y datos</p>
+                  </div>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="9 18 15 12 9 6"/>
+                  </svg>
+                </button>
               </div>
             </div>
 
@@ -180,8 +241,8 @@ import { ApiService } from '../../services/api.service';
                   <div class="w-1 h-4 bg-emerald-500 rounded-full"></div>
                   Siguiente en Cola
                 </h3>
-                <button class="text-xs text-slate-400 font-bold bg-transparent border-0 flex items-center gap-1">
-                  Citas del dia
+                <button (click)="navigateTo('/citas')" class="text-xs text-[#00328b] font-bold hover:underline cursor-pointer bg-transparent border-0 flex items-center gap-1">
+                  Ver todas
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
                 </button>
               </div>
